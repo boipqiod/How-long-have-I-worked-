@@ -1,0 +1,25 @@
+{
+  "appId": "com.howlonghaveiworked.app",
+  "productName": "How long have I worked?",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "node_modules/**/*"
+  ],
+  "mac": {
+    "target": "dmg",
+    "category": "public.app-category.productivity",
+    "icon": "src/assets/icon.icns",
+    "type": "distribution"
+  },
+  "dmg": {
+    "title": "How long have I worked?",
+    "icon": "src/assets/icon.icns"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}

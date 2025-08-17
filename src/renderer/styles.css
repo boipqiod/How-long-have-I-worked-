@@ -1,0 +1,252 @@
+/**
+ * Styles for How long have I worked? settings window
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.4;
+  font-size: 10px;
+}
+
+.settings-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 15px;
+  background: white;
+  max-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  border-bottom: 1px solid #e1e8ed;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 8px 15px;
+  border: none;
+  background: none;
+  color: #7f8c8d;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #3498db;
+  border-bottom-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+/* Tab Content */
+.tab-content {
+  position: relative;
+  min-height: 200px;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.setting-group {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  background: #fafbfc;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-size: 11px;
+}
+
+.radio-label:hover,
+.checkbox-label:hover {
+  background-color: #f0f2f5;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #3498db;
+}
+
+.number-input,
+.time-input {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 10px;
+  width: auto;
+  min-width: 60px;
+}
+
+.number-input:focus,
+.time-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 60px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Disabled state for inputs */
+input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Message styles */
+.message {
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  border-left: 3px solid;
+  font-size: 10px;
+}
+
+.message-error {
+  background-color: #fee;
+  color: #c53030;
+  border-left-color: #e53e3e;
+}
+
+.message-success {
+  background-color: #f0fff4;
+  color: #2f855a;
+  border-left-color: #38a169;
+}
+
+.message-info {
+  background-color: #ebf8ff;
+  color: #2c5282;
+  border-left-color: #3182ce;
+}
+
+/* Input error state */
+input.error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.2);
+}
+
+/* Loading state */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form validation styles */
+input:invalid {
+  border-color: #e53e3e;
+}
+
+input:valid {
+  border-color: #38a169;
+}

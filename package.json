@@ -1,0 +1,35 @@
+{
+  "name": "how-long-have-i-worked",
+  "version": "1.0.0",
+  "description": "How long have I worked? - A macOS menu bar app for tracking work hours",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "npm run build && electron dist/main/index.js",
+    "build": "tsc && cp -r src/renderer dist/",
+    "build:dev": "npm run build && electron dist/main/index.js",
+    "start": "electron dist/main/index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "electron",
+    "menubar",
+    "time-tracker",
+    "productivity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@types/electron-store": "^3.2.2",
+    "@types/node": "^24.3.0",
+    "electron": "^37.3.0",
+    "electron-builder": "^26.0.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "electron-store": "^10.1.0"
+  }
+}
